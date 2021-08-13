@@ -15,4 +15,6 @@ public interface CashTransactionService {
     Collection<CashTransaction> getTransactionByAmount(double amount);
 
     Collection<CashTransaction> getTransactionByDate(Date date);
+
+    CashTransaction addCashTransaction(CashTransaction transaction);
 }
