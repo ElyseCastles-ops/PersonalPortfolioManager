@@ -2,6 +2,7 @@ package com.citi.training.PersonalPortfolioManager.service;
 
 import com.citi.training.PersonalPortfolioManager.entity.CashTransaction;
 import com.citi.training.PersonalPortfolioManager.entity.InvestmentTransaction;
+import com.citi.training.PersonalPortfolioManager.repo.InvestmentTransactionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,18 +16,18 @@ public class InvestmentTransactionServiceImpl implements InvestmentTransactionSe
     private InvestmentTransactionRepository investmentTransactionRepository;
 
     @Override
-    public Collection<CashTransaction> getTransactionById(int id) {return investmentTransactionRepository.findById(id);}
+    public Collection<InvestmentTransaction> getTransactionById(int id) {return investmentTransactionRepository.findById(id);}
 
     @Override
-    public Collection<CashTransaction> getTransactionByAccountId(int accountId) {return investmentTransactionRepository.findByAccountId(accountId);}
+    public Collection<InvestmentTransaction> getTransactionByAccountId(int accountId) {return investmentTransactionRepository.findByAccountId(accountId);}
 
     @Override
-    public Collection<CashTransaction> getTransactionByName(String name) {return investmentTransactionRepository.findByName(name);}
+    public Collection<InvestmentTransaction> getTransactionByTicker(String ticker) {return investmentTransactionRepository.findByTicker(ticker);}
 
     @Override
-    public Collection<CashTransaction> getTransactionByAmount(double amount) {return  investmentTransactionRepository.findByAmount(amount);}
+    public Collection<InvestmentTransaction> getTransactionByQuantity(double quantity) {return  investmentTransactionRepository.findByQuantity(quantity);}
 
     @Override
-    public Collection<CashTransaction> getTransactionByDate(Date date) {return investmentTransactionRepository.findByDate(date);}
+    public Collection<InvestmentTransaction> getTransactionByDate(Date date) {return investmentTransactionRepository.findByDate(date);}
 
 }

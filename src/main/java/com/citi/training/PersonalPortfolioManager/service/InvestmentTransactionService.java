@@ -1,18 +1,19 @@
 package com.citi.training.PersonalPortfolioManager.service;
 
 import com.citi.training.PersonalPortfolioManager.entity.CashTransaction;
+import com.citi.training.PersonalPortfolioManager.entity.InvestmentTransaction;
 
 import java.util.Collection;
 import java.util.Date;
 
 public interface InvestmentTransactionService {
-    Collection<CashTransaction> getTransactionById(int id);
+    Collection<InvestmentTransaction> getTransactionById(int id);
 
-    Collection<CashTransaction> getTransactionByAccountId(int accountId);
+    Collection<InvestmentTransaction> getTransactionByAccountId(int accountId);
 
-    Collection<CashTransaction> getTransactionByName(String name);
+    Collection<InvestmentTransaction> getTransactionByTicker(String ticker);
 
-    Collection<CashTransaction> getTransactionByAmount(double amount);
+    Collection<InvestmentTransaction> getTransactionByQuantity(double quantity);
 
-    Collection<CashTransaction> getTransactionByDate(Date date);
+    Collection<InvestmentTransaction> getTransactionByDate(Date date);
 }

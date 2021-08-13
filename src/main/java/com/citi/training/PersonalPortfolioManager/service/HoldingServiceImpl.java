@@ -1,6 +1,7 @@
 package com.citi.training.PersonalPortfolioManager.service;
 
 import com.citi.training.PersonalPortfolioManager.entity.Holding;
+import com.citi.training.PersonalPortfolioManager.repo.HoldingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +23,5 @@ public class HoldingServiceImpl implements HoldingService {
     public Collection<Holding> getHoldingByAccountTicker(String ticker) {return holdingRepository.findByTicker(ticker);}
 
     @Override
-    public Collection<Holding> getHoldingByAccountQuantity(double quantity){return holdingRepository.findByAccountQuantity(quantity);}
+    public Collection<Holding> getHoldingByAccountQuantity(double quantity){return holdingRepository.findByQuantity(quantity);}
 }
