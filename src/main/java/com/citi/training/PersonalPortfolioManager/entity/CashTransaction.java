@@ -13,7 +13,7 @@ public class CashTransaction implements Transaction{
     private Integer id;
 
     @Column(name="account_id")
-    private Integer accoutId;
+    private Integer accountId;
 
     @Column(name="name")
     private String name;
@@ -32,12 +32,12 @@ public class CashTransaction implements Transaction{
         this.id = id;
     }
 
-    public int getAccoutId() {
-        return accoutId;
+    public int getAccountId() {
+        return accountId;
     }
 
-    public void setAccoutId(int accoutId) {
-        this.accoutId = accoutId;
+    public void setAccountId(int accountId) {
+        this.accountId = accountId;
     }
 
     public String getName() {
