@@ -1,5 +1,6 @@
 package com.citi.training.PersonalPortfolioManager.rest;
 
+import com.citi.training.PersonalPortfolioManager.entity.Account;
 import com.citi.training.PersonalPortfolioManager.entity.InvestmentTransaction;
 import com.citi.training.PersonalPortfolioManager.service.InvestmentTransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +28,8 @@ public class InvestmentTransactionController {
     public Collection<InvestmentTransaction> getTransactionsByAccountId(@PathVariable("accountId") int accountId) {
         return investmentTransactionService.getTransactionsByAccountId(accountId);
     }
+
+    @RequestMapping(method = RequestMethod.GET)
+    Iterable<InvestmentTransaction> findAll() { return investmentTransactionService.getAllInvestments();}
 
 }

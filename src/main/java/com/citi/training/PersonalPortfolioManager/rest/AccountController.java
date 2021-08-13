@@ -26,4 +26,6 @@ public class AccountController {
         return accountService.getById(id);
     }
 
+    @RequestMapping(method = RequestMethod.GET)
+    Iterable<Account> findAll() { return accountService.getAllAccounts();}
 }

@@ -1,5 +1,6 @@
 package com.citi.training.PersonalPortfolioManager.service;
 
+import com.citi.training.PersonalPortfolioManager.entity.Account;
 import com.citi.training.PersonalPortfolioManager.entity.CashTransaction;
 import com.citi.training.PersonalPortfolioManager.entity.InvestmentTransaction;
 
@@ -16,4 +17,7 @@ public interface InvestmentTransactionService {
     Collection<InvestmentTransaction> getTransactionByQuantity(double quantity);
 
     Collection<InvestmentTransaction> getTransactionByDate(Date date);
+
+    Iterable<InvestmentTransaction> getAllInvestments();
+
 }
