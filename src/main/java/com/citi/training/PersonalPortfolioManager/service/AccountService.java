@@ -16,5 +16,9 @@ public interface AccountService {
 
     Collection<Account> getByBalance(Double balance);
 
+    double getAccountBalance(int id);
+
+    double getNetWorth();
+
     Iterable<Account> getAllAccounts();
 }

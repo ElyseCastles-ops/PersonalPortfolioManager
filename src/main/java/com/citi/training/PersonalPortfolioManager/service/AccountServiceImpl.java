@@ -24,6 +24,12 @@ public class AccountServiceImpl implements AccountService {
 
     public Collection<Account> getByBalance(Double balance) { return accountRepository.findByBalance(balance);}
 
+    public double getAccountBalance(int id) {
+        return accountRepository.findById(id).getBalance();
+    }
+
+    public double getNetWorth() { return accountRepository.sumAllBalances(); }
+
     @Override
     public Iterable<Account> getAllAccounts() {
         return accountRepository.findAll();
