@@ -10,4 +10,5 @@ public interface HoldingRepository extends JpaRepository<Holding, Integer> {
     Collection<Holding> findByAccountId(int accountId);
     Collection<Holding> findByTicker(String ticker);
     Collection<Holding> findByQuantity(double quantity);
+
 }
