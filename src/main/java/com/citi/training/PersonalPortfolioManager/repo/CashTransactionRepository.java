@@ -1,5 +1,6 @@
 package com.citi.training.PersonalPortfolioManager.repo;
 
+import com.citi.training.PersonalPortfolioManager.entity.CashTransaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Collection;
