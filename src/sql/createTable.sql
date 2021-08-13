@@ -1,5 +1,7 @@
 CREATE DATABASE personalportfolio;
 
+use personalportfolio;
+
 CREATE TABLE `personalportfolio`.`accounts` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
@@ -49,6 +51,28 @@ CREATE TABLE `personalportfolio`.`investmenttransactions` (
     REFERENCES `personalportfolio`.`accounts` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
+    
+    INSERT INTO `personalportfolio`.`accounts` (name, type, description, balance) VALUES 
+     ('Citi', 'Cash', 'checking', 0),
+     ('Cappital One', 'Cash', 'checking', 0),
+     ('Chase', 'Cash', 'checking', 0),
+     ('HSBC', 'Cash', 'checking', 0),
+     ('Huntington', 'Cash', 'checking', 0),
+     ('BMO Harris Bank', 'Cash', 'checking', 0),
+     ('Alliant', 'Cash', 'checking', 0),
+     ('Bank of America', 'Cash', 'checking', 0),
+     ('PNC', 'Cash', 'checking', 0),
+     ('Wells Fargo', 'Cash', 'checking', 0),
+     ('TD Bank', 'Cash', 'checking', 0),
+	 ('CiTBank', 'Investment', 'savings', 0),
+     ('Pounce Bank', 'Investment', 'savings', 0),
+     ('Marcus', 'Investment', 'savings', 0),
+     ('American Express', 'Investment', 'savings', 0),
+     ('Varo', 'Investment', 'savings', 0),
+     ('Barclays', 'Investment', 'savings', 0),
+     ('Ally', 'Investment', 'savings', 0),
+     ('Live Oak Bank', 'Investment', 'savings', 0);
+
 
     
     
