@@ -28,4 +28,9 @@ public class CashTransactionServiceImpl implements CashTransactionService {
 
     @Override
     public Collection<CashTransaction> getTransactionByDate(Date date) {return cashTransactionRepository.findByDate(date);}
+
+    @Override
+    public CashTransaction addCashTransaction(CashTransaction transaction) {
+        return cashTransactionRepository.save(transaction);
+    }
 }

@@ -4,6 +4,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="accounts")
+/*@NamedQueries({
+        @NamedQuery(name="account.getAllCashAccounts",
+                query="select a from Account as a where a.type like Cash",
+                hints = {@QueryHint(name = "org.hibernate.cacheable", value = "true")})
+})*/
 public class Account {
 
     @Id

@@ -20,6 +20,11 @@ public class CashTransactionController {
         return cashTransactionService.getAllCashTransactions();
     }*/
 
+    @RequestMapping(method = RequestMethod.POST, value = "/new/{transaction}")
+    public CashTransaction addNewCashTransaction(@PathVariable("transaction") CashTransaction transaction) {
+        return cashTransactionService.addCashTransaction(transaction);
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public CashTransaction getTransactionById(@PathVariable("id") int id) {
         return cashTransactionService.getTransactionById(id);
