@@ -7,7 +7,7 @@ import java.util.Collection;
 public interface AccountService {
 
     Account getById(int id);
-
+    
     Collection<Account> getByName(String name);
 
     Collection<Account> getByType(String type);
@@ -20,4 +20,5 @@ public interface AccountService {
 
     double getNetWorth();
 
+    Iterable<Account> getAllAccounts();
 }

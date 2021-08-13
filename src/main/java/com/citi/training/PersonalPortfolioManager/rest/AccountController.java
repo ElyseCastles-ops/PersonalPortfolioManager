@@ -16,10 +16,6 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
-   /* @GetMapping
-    public Collection<Account> getAccounts() {
-        return accountService.getAllAccounts();
-    }*/
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public Account getAccountById(@PathVariable("id") int id) {
@@ -37,4 +33,6 @@ public class AccountController {
         return accountService.getNetWorth();
     }
 
+    @RequestMapping(method = RequestMethod.GET)
+    Iterable<Account> findAll() { return accountService.getAllAccounts();}
 }

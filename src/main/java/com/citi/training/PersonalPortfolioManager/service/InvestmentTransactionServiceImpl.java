@@ -1,5 +1,6 @@
 package com.citi.training.PersonalPortfolioManager.service;
 
+import com.citi.training.PersonalPortfolioManager.entity.Account;
 import com.citi.training.PersonalPortfolioManager.entity.CashTransaction;
 import com.citi.training.PersonalPortfolioManager.entity.InvestmentTransaction;
 import com.citi.training.PersonalPortfolioManager.repo.InvestmentTransactionRepository;
@@ -29,5 +30,10 @@ public class InvestmentTransactionServiceImpl implements InvestmentTransactionSe
 
     @Override
     public Collection<InvestmentTransaction> getTransactionByDate(Date date) {return investmentTransactionRepository.findByDate(date);}
+
+    @Override
+    public Iterable<InvestmentTransaction> getAllInvestments() {
+        return investmentTransactionRepository.findAll();
+    }
 
 }

@@ -30,4 +30,8 @@ public class AccountServiceImpl implements AccountService {
 
     public double getNetWorth() { return accountRepository.sumAllBalances(); }
 
+    @Override
+    public Iterable<Account> getAllAccounts() {
+        return accountRepository.findAll();
+    }
 }
