@@ -10,7 +10,7 @@ public interface InvestmentTransactionRepository extends JpaRepository<Investmen
     Collection<InvestmentTransaction> findById(int id);
     Collection<InvestmentTransaction> findByAccountId(int accountId);
     Collection<InvestmentTransaction> findByTicker(String ticker);
-    Collection<InvestmentTransaction> findByPricePer(double pricePer);
+    Collection<InvestmentTransaction> findByPriceper(double pricePer);
     Collection<InvestmentTransaction> findByQuantity(double quantity);
     Collection<InvestmentTransaction> findByDate(Date date);
 }

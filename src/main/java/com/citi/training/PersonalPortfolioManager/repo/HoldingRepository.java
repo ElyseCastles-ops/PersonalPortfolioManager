@@ -8,6 +8,7 @@ import java.util.Collection;
 public interface HoldingRepository extends JpaRepository<Holding, Integer> {
     Collection<Holding> findById(int id);
     Collection<Holding> findByAccountId(int accountId);
-    Collection<Holding> findByAccountTicker(String ticker);
-    Collection<Holding> findByAccountQuantity(double quantity);
+    Collection<Holding> findByTicker(String ticker);
+    Collection<Holding> findByQuantity(double quantity);
+
 }
