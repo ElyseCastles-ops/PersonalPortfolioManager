@@ -23,4 +23,9 @@ public class AccountServiceImpl implements AccountService {
     public Collection<Account> getByDescription(String des) { return accountRepository.findByDescription(des);}
 
     public Collection<Account> getByBalance(Double balance) { return accountRepository.findByBalance(balance);}
+
+    @Override
+    public Iterable<Account> getAllAccounts() {
+        return accountRepository.findAll();
+    }
 }
