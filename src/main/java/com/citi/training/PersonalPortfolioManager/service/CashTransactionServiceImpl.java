@@ -15,10 +15,10 @@ public class CashTransactionServiceImpl implements CashTransactionService {
     private CashTransactionRepository cashTransactionRepository;
 
     @Override
-    public Collection<CashTransaction> getTransactionById(int id) {return cashTransactionRepository.findById(id);}
+    public CashTransaction getTransactionById(int id) {return cashTransactionRepository.findById(id);}
 
     @Override
-    public Collection<CashTransaction> getTransactionByAccountId(int accountId) {return cashTransactionRepository.findByAccountId(accountId);}
+    public Collection<CashTransaction> getTransactionsByAccountId(int accountId) {return cashTransactionRepository.findByAccountId(accountId);}
 
     @Override
     public Collection<CashTransaction> getTransactionByName(String name) {return cashTransactionRepository.findByName(name);}

@@ -14,10 +14,10 @@ public class HoldingServiceImpl implements HoldingService {
     private HoldingRepository holdingRepository;
 
     @Override
-    public Collection<Holding> getHoldingById(int id) {return holdingRepository.findById(id);}
+    public Holding getHoldingById(int id) {return holdingRepository.findById(id);}
 
     @Override
-    public Collection<Holding> getHoldingByAccountId(int accountId) {return  holdingRepository.findByAccountId(accountId);}
+    public Collection<Holding> getHoldingsByAccountId(int accountId) {return  holdingRepository.findByAccountId(accountId);}
 
     @Override
     public Collection<Holding> getHoldingByAccountTicker(String ticker) {return holdingRepository.findByTicker(ticker);}

@@ -6,9 +6,9 @@ import java.util.Collection;
 import java.util.Date;
 
 public interface CashTransactionService {
-    Collection<CashTransaction> getTransactionById(int id);
+    CashTransaction getTransactionById(int id);
 
-    Collection<CashTransaction> getTransactionByAccountId(int accountId);
+    Collection<CashTransaction> getTransactionsByAccountId(int accountId);
 
     Collection<CashTransaction> getTransactionByName(String name);
 

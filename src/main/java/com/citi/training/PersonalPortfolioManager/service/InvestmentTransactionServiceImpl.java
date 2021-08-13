@@ -16,10 +16,10 @@ public class InvestmentTransactionServiceImpl implements InvestmentTransactionSe
     private InvestmentTransactionRepository investmentTransactionRepository;
 
     @Override
-    public Collection<InvestmentTransaction> getTransactionById(int id) {return investmentTransactionRepository.findById(id);}
+    public InvestmentTransaction getTransactionById(int id) {return investmentTransactionRepository.findById(id);}
 
     @Override
-    public Collection<InvestmentTransaction> getTransactionByAccountId(int accountId) {return investmentTransactionRepository.findByAccountId(accountId);}
+    public Collection<InvestmentTransaction> getTransactionsByAccountId(int accountId) {return investmentTransactionRepository.findByAccountId(accountId);}
 
     @Override
     public Collection<InvestmentTransaction> getTransactionByTicker(String ticker) {return investmentTransactionRepository.findByTicker(ticker);}

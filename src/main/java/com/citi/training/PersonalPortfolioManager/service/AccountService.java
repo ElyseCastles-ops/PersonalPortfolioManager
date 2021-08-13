@@ -6,9 +6,9 @@ import java.util.Collection;
 
 public interface AccountService {
 
-    Collection<Account> getById(int id);
+    Account getById(int id);
 
-   Collection<Account> getByName(String name);
+    Collection<Account> getByName(String name);
 
     Collection<Account> getByType(String type);
 

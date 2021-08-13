@@ -5,9 +5,9 @@ import com.citi.training.PersonalPortfolioManager.entity.Holding;
 import java.util.Collection;
 
 public interface HoldingService {
-    Collection<Holding> getHoldingById(int id);
+    Holding getHoldingById(int id);
 
-    Collection<Holding> getHoldingByAccountId(int accountId);
+    Collection<Holding> getHoldingsByAccountId(int accountId);
 
     Collection<Holding> getHoldingByAccountTicker(String ticker);
 

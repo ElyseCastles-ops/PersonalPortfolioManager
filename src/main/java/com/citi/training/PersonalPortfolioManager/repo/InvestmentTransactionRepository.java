@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.Date;
 
 public interface InvestmentTransactionRepository extends JpaRepository<InvestmentTransaction, Integer> {
-    Collection<InvestmentTransaction> findById(int id);
+    InvestmentTransaction findById(int id);
     Collection<InvestmentTransaction> findByAccountId(int accountId);
     Collection<InvestmentTransaction> findByTicker(String ticker);
     Collection<InvestmentTransaction> findByPriceper(double pricePer);

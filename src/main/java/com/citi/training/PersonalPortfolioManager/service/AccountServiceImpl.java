@@ -14,7 +14,7 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountRepository accountRepository;
 
-    public Collection<Account> getById(int id) { return accountRepository.findById(id);}
+    public Account getById(int id) { return accountRepository.findById(id);}
 
     public Collection<Account> getByName(String name) { return accountRepository.findByName(name);}
 
