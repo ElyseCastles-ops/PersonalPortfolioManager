@@ -20,9 +20,13 @@ public class CashTransactionController {
         return cashTransactionService.getAllCashTransactions();
     }*/
 
-    @RequestMapping(method = RequestMethod.POST, value = "/new/{transaction}")
-    public CashTransaction addNewCashTransaction(@PathVariable("transaction") CashTransaction transaction) {
-        return cashTransactionService.addCashTransaction(transaction);
+    @RequestMapping(method = RequestMethod.POST, value = "/new")
+    public CashTransaction addNewCashTransaction(@RequestBody CashTransaction transaction) {
+        CashTransaction t = cashTransactionService.addCashTransaction(transaction);
+        /*Integer a_id = t.getAccountId();
+        Account a = cashTransactionService.getAccountByAccountId(a_id);
+        a.setBalance(a.getBalance()+t.getAmount());*/
+        return t;
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")

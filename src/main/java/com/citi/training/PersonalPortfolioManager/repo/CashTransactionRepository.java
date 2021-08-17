@@ -1,5 +1,6 @@
 package com.citi.training.PersonalPortfolioManager.repo;
 
+import com.citi.training.PersonalPortfolioManager.entity.Account;
 import com.citi.training.PersonalPortfolioManager.entity.CashTransaction;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,4 +14,5 @@ public interface CashTransactionRepository extends JpaRepository<CashTransaction
     Collection<CashTransaction> findByName(String name);
     Collection<CashTransaction> findByAmount(double amount);
     Collection<CashTransaction> findByDate(Date date);
+    /*Account findAccountByAccountId(int id);*/
 }

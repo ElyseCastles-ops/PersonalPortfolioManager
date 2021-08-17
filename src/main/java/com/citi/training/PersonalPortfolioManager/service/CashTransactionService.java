@@ -1,5 +1,6 @@
 package com.citi.training.PersonalPortfolioManager.service;
 
+import com.citi.training.PersonalPortfolioManager.entity.Account;
 import com.citi.training.PersonalPortfolioManager.entity.CashTransaction;
 
 import java.util.Collection;
@@ -17,4 +18,6 @@ public interface CashTransactionService {
     Collection<CashTransaction> getTransactionByDate(Date date);
 
     CashTransaction addCashTransaction(CashTransaction transaction);
+
+    /*Account getAccountByAccountId(int id);*/
 }

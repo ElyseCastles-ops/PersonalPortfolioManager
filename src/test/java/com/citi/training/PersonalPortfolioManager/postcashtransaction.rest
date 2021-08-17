@@ -1,0 +1,9 @@
+POST http://localhost:8080/cashtransactions/new
+Content-type: application/json
+
+{
+  "accountId": "2",
+  "name": "Income",
+  "amount": "1000",
+  "date": "2021-08-17"
+}
