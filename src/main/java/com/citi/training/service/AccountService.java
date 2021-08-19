@@ -16,6 +16,10 @@ public interface AccountService {
 
     Collection<Account> getByBalance(Double balance);
 
+    public double getAllInvestmentAccountValue();
+
+    public double getAllCashAccountValue();
+
     double getAccountBalance(int id);
 
     double getNetWorth();

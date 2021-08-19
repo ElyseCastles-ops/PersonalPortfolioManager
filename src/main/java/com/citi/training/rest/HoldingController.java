@@ -13,17 +13,17 @@ public class HoldingController {
     @Autowired
     private HoldingService holdingService;
 
-    /*@GetMapping
+    @GetMapping
     public Collection<Holding> getHoldings() {
         return holdingService.getAllHoldings();
-    }*/
+    }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
+    @RequestMapping(method = RequestMethod.GET, value = "/id/{id}")
     public Holding getHoldingById(@PathVariable("id") int id) {
         return holdingService.getHoldingById(id);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{accountId}")
+    @RequestMapping(method = RequestMethod.GET, value = "/accountid/{accountId}")
     public Collection<Holding> getHoldingsByAccountId(@PathVariable("accountId") int accountId) {
         return holdingService.getHoldingsByAccountId(accountId);
     }

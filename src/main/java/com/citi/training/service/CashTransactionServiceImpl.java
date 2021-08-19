@@ -45,6 +45,11 @@ public class CashTransactionServiceImpl implements CashTransactionService {
         return cashTransactionRepository.save(transaction);
     }
 
+    @Override
+    public Collection<CashTransaction> getAllCashTransactions() {
+        return cashTransactionRepository.findAll();
+    }
+
     /*public Account getAccountByAccountId(int id){
         return cashTransactionRepository.findAccountByAccountId(id);
     }*/

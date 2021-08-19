@@ -21,6 +21,15 @@ public class Holding {
     @Column(name="quantity")
     private Double quantity;
 
+    public Holding() {
+    }
+
+    public Holding(Integer accountId, String ticker, Double quantity) {
+        this.accountId = accountId;
+        this.ticker = ticker;
+        this.quantity = quantity;
+    }
+
     public Integer getId() {
         return id;
     }

@@ -24,4 +24,16 @@ public class HoldingServiceImpl implements HoldingService {
 
     @Override
     public Collection<Holding> getHoldingByAccountQuantity(double quantity){return holdingRepository.findByQuantity(quantity);}
+
+    @Override
+    public Collection<Holding> getAllHoldings() {
+        return holdingRepository.findAll();
+    }
+
+    @Override
+    public Holding getHoldingByTickerAndAccountId(String ticker, Integer accountId) {
+        return holdingRepository.findByTickerAndAccountId(ticker, accountId);
+    }
+
+
 }

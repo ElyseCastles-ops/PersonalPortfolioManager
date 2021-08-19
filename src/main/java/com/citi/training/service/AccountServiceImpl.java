@@ -28,7 +28,30 @@ public class AccountServiceImpl implements AccountService {
         return accountRepository.findById(id).getBalance();
     }
 
-    public double getNetWorth() { return accountRepository.sumAllBalances(); }
+    public double getAllCashAccountValue() {
+        Collection<Account> cashAccounts = accountRepository.findByType("Cash");
+        Double sum = 0.0;
+        for (Account account : cashAccounts) {
+            sum = sum + account.getBalance();
+        }
+        return sum;
+    }
+
+    public double getAllInvestmentAccountValue() {
+        Collection<Account> investmentAccounts = accountRepository.findByType("Investment");
+        Double sum = 0.0;
+        for (Account account : investmentAccounts) {
+            //TODO: get live price and update balance for investment accounts
+            sum = sum + account.getBalance();
+        }
+        return sum;
+    }
+
+    public double getNetWorth() {
+        Double sum = getAllCashAccountValue();
+        sum = sum + getAllInvestmentAccountValue();
+        return sum;
+    }
 
     @Override
     public Iterable<Account> getAllAccounts() {

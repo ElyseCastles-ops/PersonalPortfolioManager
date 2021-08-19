@@ -16,6 +16,7 @@ public interface InvestmentTransactionService {
 
     Collection<InvestmentTransaction> getTransactionByDate(Date date);
 
-    Iterable<InvestmentTransaction> getAllInvestments();
+    Collection<InvestmentTransaction> getAllInvestmentTransactions();
 
+    InvestmentTransaction addInvestmentTransaction(InvestmentTransaction transaction);
 }
