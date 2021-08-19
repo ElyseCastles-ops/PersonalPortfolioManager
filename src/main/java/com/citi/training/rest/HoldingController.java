@@ -1,7 +1,7 @@
-package com.citi.training.PersonalPortfolioManager.rest;
+package com.citi.training.rest;
 
-import com.citi.training.PersonalPortfolioManager.entity.Holding;
-import com.citi.training.PersonalPortfolioManager.service.HoldingService;
+import com.citi.training.entity.Holding;
+import com.citi.training.service.HoldingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

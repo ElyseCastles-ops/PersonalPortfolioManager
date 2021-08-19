@@ -1,6 +1,6 @@
-package com.citi.training.PersonalPortfolioManager.service;
+package com.citi.training.service;
 
-import com.citi.training.PersonalPortfolioManager.entity.Holding;
+import com.citi.training.entity.Holding;
 
 import java.util.Collection;
 
