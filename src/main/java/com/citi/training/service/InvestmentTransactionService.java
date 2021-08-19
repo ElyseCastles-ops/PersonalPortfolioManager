@@ -15,4 +15,7 @@ public interface InvestmentTransactionService {
     Collection<InvestmentTransaction> getTransactionByQuantity(double quantity);
 
     Collection<InvestmentTransaction> getTransactionByDate(Date date);
+
+    Iterable<InvestmentTransaction> getAllInvestments();
+
 }

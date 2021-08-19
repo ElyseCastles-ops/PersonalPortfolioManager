@@ -6,13 +6,13 @@ import java.util.Date;
 
 @Entity
 @Table(name="cashtransactions")
+
 public class CashTransaction implements Transaction, Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
     private Integer id;
-
 
     @Column(name="account_id")
     private Integer accountId;
@@ -26,6 +26,10 @@ public class CashTransaction implements Transaction, Serializable {
     @Column(name="date")
     private Date date;
 
+    public int getId() {
+        return id;
+    }
+
     public CashTransaction() {
     }
 
@@ -35,7 +39,6 @@ public class CashTransaction implements Transaction, Serializable {
         this.amount = amount;
         this.date = date;
     }
-
 
     public void setId(int id) {
         this.id = id;

@@ -1,5 +1,6 @@
 package com.citi.training.service;
 
+
 import com.citi.training.entity.Account;
 import com.citi.training.entity.CashTransaction;
 import com.citi.training.repo.AccountRepository;
@@ -47,4 +48,5 @@ public class CashTransactionServiceImpl implements CashTransactionService {
     /*public Account getAccountByAccountId(int id){
         return cashTransactionRepository.findAccountByAccountId(id);
     }*/
+
 }

@@ -28,4 +28,7 @@ public class InvestmentTransactionController {
         return investmentTransactionService.getTransactionsByAccountId(accountId);
     }
 
+    @RequestMapping(method = RequestMethod.GET)
+    Iterable<InvestmentTransaction> findAll() { return investmentTransactionService.getAllInvestments();}
+
 }

@@ -29,4 +29,18 @@ public class AccountController {
         return accountService.getById(id);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/balance/{id}")
+    public double getAccountBalance(@PathVariable("id") int id) {
+        return accountService.getAccountBalance(id);
+
+    }
+
+    @RequestMapping("/networth")
+    public double getNetWorth() {
+        return accountService.getNetWorth();
+    }
+
+    @RequestMapping(method = RequestMethod.GET)
+    Iterable<Account> findAll() { return accountService.getAllAccounts();}
+
 }

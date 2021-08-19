@@ -29,4 +29,10 @@ public class InvestmentTransactionServiceImpl implements InvestmentTransactionSe
     @Override
     public Collection<InvestmentTransaction> getTransactionByDate(Date date) {return investmentTransactionRepository.findByDate(date);}
 
+    @Override
+    public Iterable<InvestmentTransaction> getAllInvestments() {
+        return investmentTransactionRepository.findAll();
+    }
+
+
 }

@@ -13,5 +13,7 @@ public interface CashTransactionRepository extends JpaRepository<CashTransaction
     Collection<CashTransaction> findByName(String name);
     Collection<CashTransaction> findByAmount(double amount);
     Collection<CashTransaction> findByDate(Date date);
+
     /*Account findAccountByAccountId(int id);*/
+
 }
