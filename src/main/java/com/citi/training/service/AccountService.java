@@ -1,13 +1,13 @@
-package com.citi.training.PersonalPortfolioManager.service;
+package com.citi.training.service;
 
-import com.citi.training.PersonalPortfolioManager.entity.Account;
+import com.citi.training.entity.Account;
 
 import java.util.Collection;
 
 public interface AccountService {
 
     Account getById(int id);
-    
+
     Collection<Account> getByName(String name);
 
     Collection<Account> getByType(String type);
@@ -21,4 +21,5 @@ public interface AccountService {
     double getNetWorth();
 
     Iterable<Account> getAllAccounts();
+
 }

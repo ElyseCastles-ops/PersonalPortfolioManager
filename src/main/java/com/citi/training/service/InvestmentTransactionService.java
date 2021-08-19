@@ -1,8 +1,6 @@
-package com.citi.training.PersonalPortfolioManager.service;
+package com.citi.training.service;
 
-import com.citi.training.PersonalPortfolioManager.entity.Account;
-import com.citi.training.PersonalPortfolioManager.entity.CashTransaction;
-import com.citi.training.PersonalPortfolioManager.entity.InvestmentTransaction;
+import com.citi.training.entity.InvestmentTransaction;
 
 import java.util.Collection;
 import java.util.Date;

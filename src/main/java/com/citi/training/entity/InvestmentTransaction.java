@@ -1,11 +1,11 @@
-package com.citi.training.PersonalPortfolioManager.entity;
-
+package com.citi.training.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
-@Table(name="holdings")
-public class Holding {
+@Table(name="investmenttransactions")
+public class InvestmentTransaction implements Transaction{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -18,8 +18,14 @@ public class Holding {
     @Column(name="ticker")
     private String ticker;
 
+    @Column(name="priceper")
+    private Double priceper;
+
     @Column(name="quantity")
-    private Double quantity;
+    private Integer quantity;
+
+    @Column(name="date")
+    private Date date;
 
     public Integer getId() {
         return id;
@@ -45,11 +51,27 @@ public class Holding {
         this.ticker = ticker;
     }
 
-    public Double getQuantity() {
+    public Double getPriceper() {
+        return priceper;
+    }
+
+    public void setPriceper(Double priceper) {
+        this.priceper = priceper;
+    }
+
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Double quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

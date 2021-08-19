@@ -1,6 +1,6 @@
-package com.citi.training.PersonalPortfolioManager.repo;
+package com.citi.training.repo;
 
-import com.citi.training.PersonalPortfolioManager.entity.Account;
+import com.citi.training.entity.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -15,4 +15,5 @@ public interface AccountRepository extends JpaRepository<Account, Integer> {
 
     @Query(value = "SELECT sum(a.balance) FROM Account a")
     double sumAllBalances();
+
 }

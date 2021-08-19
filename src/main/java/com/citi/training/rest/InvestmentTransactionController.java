@@ -1,8 +1,7 @@
-package com.citi.training.PersonalPortfolioManager.rest;
+package com.citi.training.rest;
 
-import com.citi.training.PersonalPortfolioManager.entity.Account;
-import com.citi.training.PersonalPortfolioManager.entity.InvestmentTransaction;
-import com.citi.training.PersonalPortfolioManager.service.InvestmentTransactionService;
+import com.citi.training.entity.InvestmentTransaction;
+import com.citi.training.service.InvestmentTransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

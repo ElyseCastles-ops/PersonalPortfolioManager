@@ -1,4 +1,4 @@
-package com.citi.training.PersonalPortfolioManager;
+package com.citi.training;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
