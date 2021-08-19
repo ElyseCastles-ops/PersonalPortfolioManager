@@ -13,7 +13,8 @@ public class CashTransaction implements Transaction, Serializable {
     @Column(name="id")
     private Integer id;
 
-    @Column(name="account_id")
+    @ManyToMany
+    @JoinColumn(name="account_id", nullable = false)
     private Integer accountId;
 
     @Column(name="name")

@@ -1,6 +1,7 @@
 package com.citi.training.PersonalPortfolioManager.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name="accounts")
@@ -27,6 +28,9 @@ public class Account {
 
     @Column(name="balance")
     private Double balance;
+
+    @OneToMany(mappedBy="account")
+    private Set<CashTransaction> cashTransactionSet;
 
     public Integer getId() {
         return id;
