@@ -2,6 +2,7 @@ package com.citi.training.rest;
 
 import com.citi.training.entity.Account;
 import com.citi.training.service.AccountService;
+import org.apache.coyote.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +34,16 @@ public class AccountController {
     public double getAccountBalance(@PathVariable("id") int id) {
         return accountService.getAccountBalance(id);
 
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/cash/total")
+    public double getCashAccountsTotal() {
+        return accountService.getAllCashAccountValue();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/investment/total")
+    public double getInvestmentAccountsTotal() {
+        return accountService.getAllInvestmentAccountValue();
     }
 
     @RequestMapping("/networth")
