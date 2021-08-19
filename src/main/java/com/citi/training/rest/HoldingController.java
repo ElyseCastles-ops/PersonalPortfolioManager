@@ -13,10 +13,10 @@ public class HoldingController {
     @Autowired
     private HoldingService holdingService;
 
-    /*@GetMapping
+    @GetMapping
     public Collection<Holding> getHoldings() {
         return holdingService.getAllHoldings();
-    }*/
+    }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public Holding getHoldingById(@PathVariable("id") int id) {

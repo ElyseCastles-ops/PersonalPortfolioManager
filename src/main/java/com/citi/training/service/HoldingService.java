@@ -12,4 +12,8 @@ public interface HoldingService {
     Collection<Holding> getHoldingByAccountTicker(String ticker);
 
     Collection<Holding> getHoldingByAccountQuantity(double quantity);
+
+    Collection<Holding> getAllHoldings();
+
+    Holding getHoldingByTickerAndAccountId(String ticker, Integer accountId);
 }

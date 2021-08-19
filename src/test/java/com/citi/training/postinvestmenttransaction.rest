@@ -1,0 +1,10 @@
+POST http://localhost:8080/investmenttransactions/new
+Content-type: application/json
+
+{
+  "accountId": "3",
+  "ticker": "OTCMKTS: BDRBF",
+  "quantity": "50",
+  "priceper": "1.23",
+  "date": "2021-08-19"
+}

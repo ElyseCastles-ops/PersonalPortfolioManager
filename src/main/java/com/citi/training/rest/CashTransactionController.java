@@ -14,22 +14,22 @@ public class CashTransactionController {
     @Autowired
     private CashTransactionService cashTransactionService;
 
-    /*@GetMapping
+    @GetMapping
     public Collection<CashTransaction> getCashTransactions() {
         return cashTransactionService.getAllCashTransactions();
-    }*/
+    }
 
     @RequestMapping(method = RequestMethod.POST, value = "/new")
     public CashTransaction addNewCashTransaction(@RequestBody CashTransaction transaction) {
         return cashTransactionService.addCashTransaction(transaction);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
+    @RequestMapping(method = RequestMethod.GET, value = "/id/{id}")
     public CashTransaction getTransactionById(@PathVariable("id") int id) {
         return cashTransactionService.getTransactionById(id);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{accountId}")
+    @RequestMapping(method = RequestMethod.GET, value = "/accountid/{accountId}")
     public Collection<CashTransaction> getTransactionsByAccountId(@PathVariable("accountId") int accountId) {
         return cashTransactionService.getTransactionsByAccountId(accountId);
     }

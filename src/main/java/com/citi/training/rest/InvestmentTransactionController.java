@@ -13,22 +13,25 @@ public class InvestmentTransactionController {
     @Autowired
     private InvestmentTransactionService investmentTransactionService;
 
-   /* @GetMapping
+    @GetMapping
     public Collection<InvestmentTransaction> getInvestmentTransactions() {
         return investmentTransactionService.getAllInvestmentTransactions();
-    }*/
+    }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
+
+    @RequestMapping(method = RequestMethod.GET, value = "/id/{id}")
     public InvestmentTransaction getTransactionById(@PathVariable("id") int id) {
         return investmentTransactionService.getTransactionById(id);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/{accountId}")
+    @RequestMapping(method = RequestMethod.GET, value = "/accountid/{accountId}")
     public Collection<InvestmentTransaction> getTransactionsByAccountId(@PathVariable("accountId") int accountId) {
         return investmentTransactionService.getTransactionsByAccountId(accountId);
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    Iterable<InvestmentTransaction> findAll() { return investmentTransactionService.getAllInvestments();}
+    @RequestMapping(method = RequestMethod.POST, value = "/new")
+    public InvestmentTransaction addNewInvestmentTransaction(@RequestBody InvestmentTransaction transaction) {
+        return investmentTransactionService.addInvestmentTransaction(transaction);
+    }
 
 }

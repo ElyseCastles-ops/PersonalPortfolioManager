@@ -22,7 +22,7 @@ public class InvestmentTransaction implements Transaction{
     private Double priceper;
 
     @Column(name="quantity")
-    private Integer quantity;
+    private Double quantity;
 
     @Column(name="date")
     private Date date;
@@ -59,11 +59,11 @@ public class InvestmentTransaction implements Transaction{
         this.priceper = priceper;
     }
 
-    public Integer getQuantity() {
+    public Double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(Double quantity) {
         this.quantity = quantity;
     }
 

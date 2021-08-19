@@ -18,6 +18,8 @@ public interface CashTransactionService {
 
     CashTransaction addCashTransaction(CashTransaction transaction);
 
+    Collection<CashTransaction> getAllCashTransactions();
+
 
     /*Account getAccountByAccountId(int id);*/
 }
