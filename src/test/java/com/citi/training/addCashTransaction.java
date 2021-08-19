@@ -1,6 +1,6 @@
-package com.citi.training.PersonalPortfolioManager;
+package com.citi.training;
 
-import com.citi.training.PersonalPortfolioManager.entity.CashTransaction;
+import com.citi.training.entity.CashTransaction;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -11,11 +11,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.Date;
 import java.time.LocalDate;
-import java.util.List;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.greaterThan;
 
 public class addCashTransaction {
 

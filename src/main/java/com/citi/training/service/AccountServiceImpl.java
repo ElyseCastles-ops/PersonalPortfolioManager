@@ -1,8 +1,8 @@
-package com.citi.training.PersonalPortfolioManager.service;
+package com.citi.training.service;
 
 
-import com.citi.training.PersonalPortfolioManager.entity.Account;
-import com.citi.training.PersonalPortfolioManager.repo.AccountRepository;
+import com.citi.training.entity.Account;
+import com.citi.training.repo.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

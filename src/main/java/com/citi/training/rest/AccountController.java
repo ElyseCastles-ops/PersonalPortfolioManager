@@ -1,9 +1,7 @@
-package com.citi.training.PersonalPortfolioManager.rest;
+package com.citi.training.rest;
 
-import com.citi.training.PersonalPortfolioManager.entity.Account;
-import com.citi.training.PersonalPortfolioManager.repo.AccountRepository;
-import com.citi.training.PersonalPortfolioManager.service.AccountService;
-import org.hibernate.annotations.Parameter;
+import com.citi.training.entity.Account;
+import com.citi.training.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

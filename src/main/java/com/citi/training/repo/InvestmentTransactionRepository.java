@@ -1,6 +1,6 @@
-package com.citi.training.PersonalPortfolioManager.repo;
+package com.citi.training.repo;
 
-import com.citi.training.PersonalPortfolioManager.entity.InvestmentTransaction;
+import com.citi.training.entity.InvestmentTransaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Collection;

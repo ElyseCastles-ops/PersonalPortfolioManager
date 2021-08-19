@@ -1,4 +1,4 @@
-package com.citi.training.PersonalPortfolioManager.entity;
+package com.citi.training.entity;
 
 import javax.persistence.*;
 import java.util.Set;
