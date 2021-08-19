@@ -15,4 +15,5 @@ public interface AccountRepository extends JpaRepository<Account, Integer> {
 
     @Query(value = "SELECT sum(a.balance) FROM Account a")
     double sumAllBalances();
+
 }

@@ -19,8 +19,8 @@ public class CashTransactionController {
         return cashTransactionService.getAllCashTransactions();
     }*/
 
-    @RequestMapping(method = RequestMethod.POST, value = "/new/{transaction}")
-    public CashTransaction addNewCashTransaction(@PathVariable("transaction") CashTransaction transaction) {
+    @RequestMapping(method = RequestMethod.POST, value = "/new")
+    public CashTransaction addNewCashTransaction(@RequestBody CashTransaction transaction) {
         return cashTransactionService.addCashTransaction(transaction);
     }
 

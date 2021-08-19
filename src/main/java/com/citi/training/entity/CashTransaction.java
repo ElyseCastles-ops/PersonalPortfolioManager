@@ -1,11 +1,13 @@
 package com.citi.training.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name="cashtransactions")
-public class CashTransaction implements Transaction{
+
+public class CashTransaction implements Transaction, Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -26,6 +28,16 @@ public class CashTransaction implements Transaction{
 
     public int getId() {
         return id;
+    }
+
+    public CashTransaction() {
+    }
+
+    public CashTransaction(Integer accountId, String name, Double amount, Date date) {
+        this.accountId = accountId;
+        this.name = name;
+        this.amount = amount;
+        this.date = date;
     }
 
     public void setId(int id) {

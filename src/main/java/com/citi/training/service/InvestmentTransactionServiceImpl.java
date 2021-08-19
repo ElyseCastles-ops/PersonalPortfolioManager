@@ -34,4 +34,5 @@ public class InvestmentTransactionServiceImpl implements InvestmentTransactionSe
         return investmentTransactionRepository.findAll();
     }
 
+
 }

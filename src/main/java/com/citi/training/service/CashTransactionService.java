@@ -17,4 +17,7 @@ public interface CashTransactionService {
     Collection<CashTransaction> getTransactionByDate(Date date);
 
     CashTransaction addCashTransaction(CashTransaction transaction);
+
+
+    /*Account getAccountByAccountId(int id);*/
 }

@@ -34,4 +34,5 @@ public class AccountServiceImpl implements AccountService {
     public Iterable<Account> getAllAccounts() {
         return accountRepository.findAll();
     }
+
 }
