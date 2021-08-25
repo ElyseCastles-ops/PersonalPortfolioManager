@@ -26,6 +26,11 @@ public class AccountController {
         return accountService.getByType("Cash");
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/investment")
+    public Collection<Account> getInvestmentAccounts() {
+        return accountService.getByType("Investment");
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public Account getAccountById(@PathVariable("id") int id) {
         return accountService.getById(id);
