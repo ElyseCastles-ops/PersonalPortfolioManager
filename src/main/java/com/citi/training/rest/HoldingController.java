@@ -27,4 +27,9 @@ public class HoldingController {
     public Collection<Holding> getHoldingsByAccountId(@PathVariable("accountId") int accountId) {
         return holdingService.getHoldingsByAccountId(accountId);
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/ticker/{ticker}")
+    public Collection<Holding> getHoldingByAccountTicker(@PathVariable("ticker") String ticker) {
+        return holdingService.getHoldingByAccountTicker(ticker);
+    }
 }
