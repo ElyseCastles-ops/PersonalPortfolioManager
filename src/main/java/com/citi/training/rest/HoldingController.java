@@ -1,11 +1,14 @@
 package com.citi.training.rest;
 
+import com.citi.training.entity.Gainer;
 import com.citi.training.entity.Holding;
+import com.citi.training.entity.Mover;
 import com.citi.training.service.HoldingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.LinkedHashMap;
 
 @CrossOrigin
 @RestController
@@ -29,8 +32,14 @@ public class HoldingController {
         return holdingService.getHoldingsByAccountId(accountId);
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/ticker/{ticker}")
-    public Collection<Holding> getHoldingByAccountTicker(@PathVariable("ticker") String ticker) {
-        return holdingService.getHoldingByAccountTicker(ticker);
+    @RequestMapping(method = RequestMethod.GET, value = "/gainerslosers")
+    public Collection<Gainer> getGainersLosers() {
+        return holdingService.getGainersLosers();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/marketmovers")
+    public Collection<Mover> getMarketMovers() {
+        return holdingService.getMarketMovers();
+
     }
 }
