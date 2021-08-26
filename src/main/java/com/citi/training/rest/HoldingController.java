@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/holdings")
 public class HoldingController {
@@ -39,5 +40,6 @@ public class HoldingController {
     @RequestMapping(method = RequestMethod.GET, value = "/marketmovers")
     public Collection<Mover> getMarketMovers() {
         return holdingService.getMarketMovers();
+
     }
 }

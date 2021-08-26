@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/accounts")
 public class AccountController {
@@ -22,6 +23,11 @@ public class AccountController {
     @RequestMapping(method = RequestMethod.GET, value = "/cash")
     public Collection<Account> getCashAccounts() {
         return accountService.getByType("Cash");
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/investment")
+    public Collection<Account> getInvestmentAccounts() {
+        return accountService.getByType("Investment");
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/{id}")

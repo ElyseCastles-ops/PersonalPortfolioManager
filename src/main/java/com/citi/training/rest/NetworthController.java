@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collection;
 import java.time.LocalDate;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/networth")
 public class NetworthController {
