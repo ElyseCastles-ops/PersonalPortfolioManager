@@ -50,10 +50,15 @@ public class HoldingServiceImpl implements HoldingService {
     public Collection<Gainer> getGainersLosers() {
         Collection<Holding> holdings = getAllHoldings();
         List<Gainer> stocks = new ArrayList<>();
+        List<String> tickers = new ArrayList<>();
         for (Holding holding : holdings) {
             try {
                 StockWrapper stock = stockService.findStock(holding.getTicker());
-                stocks.add(new Gainer(holding.getAccountId(), holding.getTicker(), holding.getQuantity(), stock.getStock().getQuote().getChangeInPercent().doubleValue()));
+                if (!tickers.contains(stock.getStock().getSymbol())) {
+                    stocks.add(new Gainer(holding.getAccountId(), holding.getTicker(), holding.getQuantity(), stock.getStock().getQuote().getChangeInPercent().doubleValue()));
+                    tickers.add(stock.getStock().getSymbol());
+                }
+
             } catch (NullPointerException e) {
                 System.out.println("No percent change found for " + holding.getTicker());
             }
