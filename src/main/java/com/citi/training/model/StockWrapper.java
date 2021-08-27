@@ -35,4 +35,5 @@ public class StockWrapper implements Comparable<StockWrapper>{
             return -1;
         }
     }
+    // comment to test automatic build with jenkins and github webhooks
 }
